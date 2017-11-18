@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Jeu Blackjack: Etape 1</title>
+    <script type="text/javascript" src="blackjack.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Jeu de Blackjack !</h1>
+    </header>
+
+    <section>
+      <article>
+        <p>Pour jouer à ce jeu entrez une valeur entre 0 et 10 dans le champ, cliquer sur "valider" puis sur le bouton "générer" pour découvrir si vous avez battu la machine ou si vous avez perdu.</p>
+        <form id="formBlackJ" onsubmit="formBlackJ_result(); return false;">
+          <fieldset>
+            <legend>Blackjack !</legend>
+            <div>
+              <label for="formBlackJ__number">Choisir un nombre entre 0 et 10:</label>
+              <input id="formBlackJ__number" type="number" name="nombre" value="0" min="0" max="10">
+            </div>
+            <input id="formBlackJ__submit" type="submit" value="Valider">
+            <div id="formBlackJ__result">Votre Nombre</div>
+          </fieldset>
+        </form>
+        <form id="formBlackJ-al" onsubmit="nombre_aleatoire(); return false;">
+          <fieldset>
+            <div>
+              <label for="formBlackJ__number-al">La valeur aléatoire est:</label>
+            </div>
+            <input id="formBlackJ__aleatoire-submit"  type="submit" value="Générer">
+            <div id="formBlackJ__result-al">Le nombre aléatoire</div>
+          </fieldset>
+        </form>
+        <span id=result>Le résultat de la partie</span>
+      </article>
+    </section>
+
+  </body>
+</html>
