@@ -1,24 +1,14 @@
-function nombre_aleatoire() {
-  var al = Math.floor(Math.random()*10)+0;
-  document.getElementById("formBlackJ__result-al").innerHTML = al.value;
-  document.getElementById("formBlackJ-al").value = "";
-
-}
+// compare user number with computer number.
+function compareBlackJ() {
+  var random = Math.floor(Math.random()*11);
+  var number = document.getElementById("formBlackJ__number").value;
 
 
-function formBlackJ_result() {
-  var nb = document.getElementById("formBlackJ__number");
-  document.getElementById("formBlackJ__result").innerHTML = nb.value;
-  document.getElementById("formBlackJ__number").value = "";
-}
+  if(random <= number ) {
+    document.getElementById("result").innerHTML = "Vous avez perdu";
+  } else if (random > number ){
+    document.getElementById("result").innerHTML = "Vous avez gagné";
+  }
 
 
-var nombre =
-var aleatoire =
-
-if (nombre > aleatoire) {
-  document.getElementById("result").innerHTML = "Vous avez gagné";
-
-} else if (nombre < aleatoire) {
-  document.getElementById("result").innerHTML = "Vous avez perdu";
 }
