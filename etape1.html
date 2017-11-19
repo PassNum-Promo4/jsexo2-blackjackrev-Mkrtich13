@@ -15,14 +15,16 @@
       <article>
         <!-- Blackjack game -->
         <p>Pour jouer à ce jeu entrez une valeur entre 1 et 10 dans le champ, cliquer sur "valider" puis sur le bouton "générer" pour découvrir si vous avez battu la machine ou si vous avez perdu.</p>
-        <form id="formBlackJ">
+        <!-- Call the function compareBlackJ() in js/blackjack.js -->
+        <form id="formBlackJ" onsubmit="compareBlackJ(); return false;">
           <fieldset>
             <legend>Bonne chance !</legend>
             <div>
               <label for="formBlackJ__number">Choisir un nombre entre 1 et 10:</label>
-              <input id="formBlackJ__number" type="number" name="nombre" min="1" max="10">
+              <input id="formBlackJ__number" type="number" value="0" name="number" min="1" max="10">
             </div>
-            <input id="formBlackJ__button" type="button" value="Valider" onclick="compareBlackJ(); return false;">
+            <input id="formBlackJ__submit" type="submit" value="Valider">
+            <p>La valeur aléatoire: <span id="al"></span></p>
             <p>Le résultat: <span id="result"></span></p>
           </fieldset>
         </form>
