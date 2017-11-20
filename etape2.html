@@ -3,8 +3,49 @@
   <head>
     <meta charset="utf-8">
     <title>Jeu Blackjack: Etape 2</title>
+    <script type="text/javascript" src="js/blackjack.js"></script>
   </head>
+
   <body>
+    <header>
+      <h1>Blackjack !</h1>
+    </header>
+
+    <section>
+      <article>
+        <!-- Blackjack game -->
+        <p>Lorsque ce jeu commence vous et l'ordinateur recevez un chiffre compris entre 1 et 11, le chiffre de l'ordinateur est masqué.<br>
+          Vous avez le choix entre :
+          <ul>
+            <li>Recevoir un nouveau chiffre qui viendra s'ajouter au votre (l'ordinateur fera de même).</li>
+            <li>Vous arreter et voir le chiffre de l'ordinateur.</li>
+          </ul>
+          Si la somme de vos nombres dépasse 21, vous avez immédiatement perdu et un message s'affiche.<br>
+          Si vous obtenez plus que l'ordinateur et moins de 21, vous avez gagné.<br>
+          Si l'ordinateur a plus que vous et moins de 21, il gagne.
+        </p>
+        <form id="formBlackJ2" onsubmit="moreNumber(); return false;">
+          <fieldset>
+            <legend>Bonne chance !</legend>
+            <div>
+              <label for="formBlackJ2__begin">Générer un nombre: </label>
+              <input id="formBlackJ2__begin" type="button" value="Demarrer !" onclick="generateNumber(); return false;">
+            </div>
+            <div>
+              <label for="formBlackJ2__again">Recevoir un nouveau chiffre: </label>
+              <input id="formBlackJ2__again" type="submit" value="Encore">
+            </div>
+            <div>
+              <label for="formBlackJ2__stop">Arreter et voir le résultat: </label>
+              <input id="formBlackJ2__stop" type="button" value="Arreter" onclick="stop(); return false;">
+            </div>
+            <p>Votre nombre: <span id="playerNumber"></span></p>
+            <p>Le nombre de l'ordinateur: <span id="cpuNumber"></span></p>
+            <p>Le resultat de la partie : <span id="resultBlackJ"></span></p>
+          </fieldset>
+        </form>
+      </article>
+    </section>
 
   </body>
 </html>
